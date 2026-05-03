@@ -1,59 +1,18 @@
 const items = [
-  "店舗内装工事",
-  "大工工事",
-  "カウンター工事",
-  "DIYサポート",
-  "店舗リフォーム",
-  "軽天・LGS工事",
-  "家具什器工事",
-  "水道・設備工事",
-  "ダクト工事",
-  "無料相談受付中",
+  "大工工事", "床工事", "天井工事", "壁工事",
+  "家具・什器工事", "カウンター工事", "軽天・LGS工事",
+  "水道・設備工事", "ダクト工事", "電気設備工事",
+  "DIYサポート", "店舗リフォーム",
 ];
 
 export default function Ticker() {
-  const repeated = [...items, ...items];
-
+  const doubled = [...items, ...items];
   return (
-    <div
-      style={{
-        backgroundColor: "#C9A84C",
-        overflow: "hidden",
-        padding: "12px 0",
-      }}
-    >
-      <div
-        className="marquee-track"
-        style={{
-          display: "flex",
-          gap: "0",
-          whiteSpace: "nowrap",
-        }}
-      >
-        {repeated.map((item, i) => (
-          <span
-            key={i}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "24px",
-              paddingRight: "48px",
-              fontSize: "12px",
-              fontWeight: 700,
-              letterSpacing: "0.15em",
-              color: "#0a0a0a",
-              textTransform: "uppercase",
-            }}
-          >
-            <span
-              style={{
-                width: "4px",
-                height: "4px",
-                backgroundColor: "#0a0a0a",
-                borderRadius: "50%",
-                display: "inline-block",
-              }}
-            />
+    <div style={{ backgroundColor: "#1B1916", borderTop: "1px solid rgba(240,237,232,0.06)", borderBottom: "1px solid rgba(240,237,232,0.06)", overflow: "hidden", padding: "13px 0" }}>
+      <div className="marquee-track" style={{ display: "flex", whiteSpace: "nowrap" }}>
+        {doubled.map((item, i) => (
+          <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: 16, paddingRight: 40, fontSize: 10, fontWeight: 600, letterSpacing: "0.22em", color: "#3E3C38", textTransform: "uppercase" }}>
+            <span style={{ width: 3, height: 3, backgroundColor: "#C4943A", borderRadius: "50%", display: "inline-block", flexShrink: 0 }} />
             {item}
           </span>
         ))}

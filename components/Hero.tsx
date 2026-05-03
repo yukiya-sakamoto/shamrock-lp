@@ -1,214 +1,92 @@
+"use client";
+
 export default function Hero() {
   return (
-    <section
-      style={{
-        minHeight: "100vh",
-        backgroundColor: "#0a0a0a",
-        display: "flex",
-        alignItems: "center",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      {/* Background grid pattern */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage:
-            "linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
+    <section style={{ minHeight: "100svh", backgroundColor: "#131110", display: "flex", alignItems: "center", position: "relative", overflow: "hidden" }}>
+      {/* Subtle grain texture via gradient */}
+      <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(ellipse 80% 60% at 70% 50%, rgba(30,61,47,0.18) 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 10% 80%, rgba(196,148,58,0.08) 0%, transparent 60%)", pointerEvents: "none" }} />
 
-      {/* Large background text */}
-      <div
-        style={{
-          position: "absolute",
-          right: "-20px",
-          top: "50%",
-          transform: "translateY(-50%)",
-          fontSize: "clamp(120px, 20vw, 260px)",
-          fontWeight: 900,
-          color: "rgba(255,255,255,0.025)",
-          letterSpacing: "-0.05em",
-          lineHeight: 1,
-          userSelect: "none",
-          whiteSpace: "nowrap",
-        }}
-      >
-        DESIGN
-      </div>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 24px 60px", width: "100%", position: "relative", zIndex: 1 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }} className="grid-2">
 
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "120px 24px 80px",
-          position: "relative",
-          zIndex: 1,
-          width: "100%",
-        }}
-      >
-        {/* Tag line */}
-        <div
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "10px",
-            marginBottom: "32px",
-          }}
-        >
-          <div
-            style={{ width: "40px", height: "1px", backgroundColor: "#C9A84C" }}
-          />
-          <span
-            style={{
-              fontSize: "11px",
-              letterSpacing: "0.3em",
-              color: "#C9A84C",
-              fontWeight: 600,
-              textTransform: "uppercase",
-            }}
-          >
-            Store Interior Construction
-          </span>
-        </div>
+          {/* Left */}
+          <div>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "1px solid rgba(196,148,58,0.35)", padding: "5px 14px", borderRadius: 2, marginBottom: 32 }}>
+              <span style={{ width: 5, height: 5, backgroundColor: "#C4943A", borderRadius: "50%", display: "inline-block" }} />
+              <span style={{ fontSize: 10, color: "#C4943A", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase" }}>Store Interior Construction</span>
+            </div>
 
-        {/* Main heading */}
-        <h1
-          style={{
-            fontSize: "clamp(48px, 8vw, 96px)",
-            fontWeight: 900,
-            lineHeight: 1.05,
-            letterSpacing: "-0.02em",
-            marginBottom: "16px",
-          }}
-        >
-          <span style={{ display: "block", color: "#ffffff" }}>LowCost</span>
-          <span style={{ display: "block", color: "#C9A84C" }}>
-            &amp; HighDesign
-          </span>
-        </h1>
+            <h1 style={{ fontSize: "clamp(46px, 7.5vw, 88px)", fontWeight: 900, lineHeight: 1.05, letterSpacing: "-0.03em", marginBottom: 20 }}>
+              <span style={{ display: "block", color: "#F0EDE8" }}>安くても、</span>
+              <span style={{ display: "block", color: "#C4943A" }}>かっこいい。</span>
+            </h1>
 
-        {/* Sub heading */}
-        <p
-          style={{
-            fontSize: "clamp(20px, 3vw, 28px)",
-            fontWeight: 700,
-            color: "#dddddd",
-            marginBottom: "24px",
-            letterSpacing: "0.05em",
-          }}
-        >
-          安くても、かっこいい。
-        </p>
+            <p style={{ fontSize: "clamp(12px, 1.6vw, 15px)", fontWeight: 600, color: "rgba(240,237,232,0.4)", marginBottom: 24, letterSpacing: "0.2em", textTransform: "uppercase" }}>
+              LowCost &amp; HighDesign
+            </p>
 
-        <p
-          style={{
-            fontSize: "15px",
-            color: "#888888",
-            maxWidth: "520px",
-            lineHeight: 1.9,
-            marginBottom: "48px",
-          }}
-        >
-          店舗内装工事の核となる大工工事を直接施工。
-          <br />
-          中間マージンをなくし、30年以上の職人技術で
-          <br />
-          あなたの理想の店舗を適正価格で実現します。
-        </p>
+            <p style={{ fontSize: 14, color: "#7A7672", lineHeight: 2.0, marginBottom: 44, maxWidth: 460 }}>
+              店舗内装工事の核となる大工工事を直接施工することで、
+              店舗工事費用を抑え、理想の店舗を現実的な予算で実現します。
+            </p>
 
-        {/* CTA Buttons */}
-        <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-          <a
-            href="#contact"
-            style={{
-              display: "inline-block",
-              backgroundColor: "#C9A84C",
-              color: "#0a0a0a",
-              padding: "18px 40px",
-              fontSize: "14px",
-              fontWeight: 700,
-              letterSpacing: "0.1em",
-              textDecoration: "none",
-              borderRadius: "2px",
-              transition: "all 0.2s",
-            }}
-          >
-            無料相談する →
-          </a>
-          <a
-            href="#works"
-            style={{
-              display: "inline-block",
-              border: "1px solid rgba(255,255,255,0.2)",
-              color: "#ffffff",
-              padding: "18px 40px",
-              fontSize: "14px",
-              fontWeight: 600,
-              letterSpacing: "0.1em",
-              textDecoration: "none",
-              borderRadius: "2px",
-              transition: "all 0.2s",
-            }}
-          >
-            施工事例を見る
-          </a>
-        </div>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <a href="#contact" style={{ display: "inline-block", backgroundColor: "#C4943A", color: "#131110", padding: "16px 36px", fontSize: 13, fontWeight: 800, letterSpacing: "0.08em", textDecoration: "none", borderRadius: 2, transition: "background 0.2s" }}
+                onMouseEnter={e => (e.currentTarget as HTMLElement).style.backgroundColor = "#D4A84A"}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.backgroundColor = "#C4943A"}>
+                無料相談・見積もり →
+              </a>
+              <a href="#works" style={{ display: "inline-block", border: "1px solid rgba(240,237,232,0.2)", color: "#F0EDE8", padding: "16px 28px", fontSize: 13, fontWeight: 600, textDecoration: "none", borderRadius: 2, transition: "all 0.2s" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = "rgba(240,237,232,0.5)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = "rgba(240,237,232,0.2)"; }}>
+                施工事例を見る
+              </a>
+            </div>
 
-        {/* Stats */}
-        <div
-          style={{
-            display: "flex",
-            gap: "48px",
-            marginTop: "80px",
-            flexWrap: "wrap",
-          }}
-        >
-          {[
-            { num: "30+", label: "年の実績" },
-            { num: "500+", label: "店舗の施工実績" },
-            { num: "0円", label: "相談・見積費用" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <div
-                style={{
-                  fontSize: "clamp(28px, 4vw, 42px)",
-                  fontWeight: 900,
-                  color: "#C9A84C",
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                {stat.num}
-              </div>
-              <div
-                style={{
-                  fontSize: "12px",
-                  color: "#666666",
-                  letterSpacing: "0.1em",
-                  marginTop: "4px",
-                }}
-              >
-                {stat.label}
+            <div style={{ marginTop: 36, paddingTop: 28, borderTop: "1px solid rgba(240,237,232,0.08)" }}>
+              <a href="tel:072-665-8869" style={{ fontSize: "clamp(20px, 3vw, 26px)", fontWeight: 900, color: "#F0EDE8", textDecoration: "none", letterSpacing: "0.04em" }}>
+                072-665-8869
+              </a>
+              <div style={{ fontSize: 11, color: "#3E3C38", marginTop: 4, letterSpacing: "0.06em" }}>受付 9:00〜19:00（日祝定休）</div>
+            </div>
+          </div>
+
+          {/* Right */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            <div style={{ position: "relative" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://static.wixstatic.com/media/11062b_a3a0fc7110504b12b74fa28666ea0bccf000.jpg"
+                alt="施工事例"
+                style={{ width: "100%", height: 280, objectFit: "cover", borderRadius: 4, filter: "brightness(0.85)" }} />
+              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(19,17,16,0.6) 0%, transparent 50%)", borderRadius: 4 }} />
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
+              {[
+                { num: "30+", label: "年の実績" },
+                { num: "500+", label: "店舗施工" },
+                { num: "¥0",  label: "相談無料" },
+              ].map(s => (
+                <div key={s.label} style={{ backgroundColor: "#1B1916", border: "1px solid rgba(240,237,232,0.07)", borderRadius: 4, padding: "18px 10px", textAlign: "center" }}>
+                  <div style={{ fontSize: "clamp(20px, 2.8vw, 26px)", fontWeight: 900, color: "#C4943A" }}>{s.num}</div>
+                  <div style={{ fontSize: 10, color: "#3E3C38", marginTop: 5, letterSpacing: "0.08em" }}>{s.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ backgroundColor: "#1E3D2F", borderRadius: 4, padding: "16px 20px", display: "flex", alignItems: "center", gap: 12 }}>
+              <svg width="16" height="20" fill="none" viewBox="0 0 16 20" style={{ flexShrink: 0 }}>
+                <path d="M8 1C4.69 1 2 3.69 2 7c0 4.5 6 12 6 12s6-7.5 6-12c0-3.31-2.69-6-6-6z" stroke="#C4943A" strokeWidth="1.4"/>
+                <circle cx="8" cy="7" r="2" stroke="#C4943A" strokeWidth="1.4"/>
+              </svg>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#F0EDE8", marginBottom: 3 }}>大阪・兵庫・京都 全域対応</div>
+                <div style={{ fontSize: 11, color: "rgba(240,237,232,0.4)", lineHeight: 1.5 }}>大阪市内・北摂・南部 / 神戸・尼崎・三田 / 京都市内・長岡京</div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
-
-      {/* Bottom fade */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: "80px",
-          background: "linear-gradient(transparent, #0a0a0a)",
-        }}
-      />
     </section>
   );
 }
