@@ -8,10 +8,10 @@ const items = [
 export default function Ticker() {
   const doubled = [...items, ...items];
   return (
-    <div style={{ backgroundColor: "#1B1916", borderTop: "1px solid rgba(240,237,232,0.06)", borderBottom: "1px solid rgba(240,237,232,0.06)", overflow: "hidden", padding: "13px 0" }}>
+    <div style={{ backgroundColor: "#1E3D2F", overflow: "hidden", padding: "13px 0" }}>
       <div className="marquee-track" style={{ display: "flex", whiteSpace: "nowrap" }}>
         {doubled.map((item, i) => (
-          <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: 16, paddingRight: 40, fontSize: 10, fontWeight: 600, letterSpacing: "0.22em", color: "#3E3C38", textTransform: "uppercase" }}>
+          <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: 16, paddingRight: 40, fontSize: 10, fontWeight: 600, letterSpacing: "0.22em", color: "rgba(240,237,232,0.55)", textTransform: "uppercase" }}>
             <span style={{ width: 3, height: 3, backgroundColor: "#C4943A", borderRadius: "50%", display: "inline-block", flexShrink: 0 }} />
             {item}
           </span>

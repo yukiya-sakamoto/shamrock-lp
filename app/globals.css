@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --bg:       #131110;
-  --bg-2:     #1B1916;
-  --bg-3:     #201E1A;
+  /* Dark */
+  --dark:     #131110;
+  --dark-2:   #1B1916;
+  --dark-3:   #201E1A;
+  /* Light */
+  --cream:    #F6F3EE;
+  --stone:    #EDE9E2;
+  --white:    #FAFAF8;
+  /* Brand */
   --forest:   #1E3D2F;
   --forest-2: #264D3C;
   --gold:     #C4943A;
   --gold-2:   #D4A84A;
-  --cream:    #F0EDE8;
-  --mid:      #7A7672;
-  --faint:    #3E3C38;
-  --border:   rgba(240,237,232,0.08);
-  --border-2: rgba(240,237,232,0.13);
+  /* Text */
+  --ink:      #1A1714;
+  --mid:      #636059;
+  --faint:    #A8A49E;
+  /* On dark */
+  --text-d:   #F0EDE8;
+  --mid-d:    #7A7672;
+  --dim-d:    #3E3C38;
+  /* Border */
+  --bd-light: #E4DED6;
+  --bd-dark:  rgba(240,237,232,0.08);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg);
-  color: var(--cream);
+  background: var(--dark);
+  color: var(--ink);
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "游ゴシック体", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
